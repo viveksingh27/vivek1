@@ -3,7 +3,50 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Website", "Website\", "{AFCD87A8-982E-40B0-96E8-540231DA8CDD}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1979"
+		Debug.AspNetCompiler.PhysicalPath = "Website\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1979\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1979"
+		Release.AspNetCompiler.PhysicalPath = "Website\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1979\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1979"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chinook.data", "Chinook.data\Chinook.data.csproj", "{C2F988D2-7A06-42D0-8D83-2A5F2CEECDDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChinookSystem", "ChinookSystem\ChinookSystem.csproj", "{21B65160-1E01-47C7-BA41-C190F76CC7AB}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFCD87A8-982E-40B0-96E8-540231DA8CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCD87A8-982E-40B0-96E8-540231DA8CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCD87A8-982E-40B0-96E8-540231DA8CDD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCD87A8-982E-40B0-96E8-540231DA8CDD}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C2F988D2-7A06-42D0-8D83-2A5F2CEECDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F988D2-7A06-42D0-8D83-2A5F2CEECDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F988D2-7A06-42D0-8D83-2A5F2CEECDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F988D2-7A06-42D0-8D83-2A5F2CEECDDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B65160-1E01-47C7-BA41-C190F76CC7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B65160-1E01-47C7-BA41-C190F76CC7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B65160-1E01-47C7-BA41-C190F76CC7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B65160-1E01-47C7-BA41-C190F76CC7AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
