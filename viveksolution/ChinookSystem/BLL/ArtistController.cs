@@ -13,27 +13,28 @@ using Chinook.data.POCOs;
 
 namespace ChinookSystem.BLL
 {
+    [DataObject]
     public class ArtistController
     {
-        //dump al instances of the entity
-        [DataObjectMethod(DataObjectMethodType.Select,false)]
+        //dump all instances of the entity
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
         public List<Artist> Artist_ListAll()
         {
             using (var context = new ChinookContext())
             {
-                //this is not using linq
-                //this is using entity framework
+                //this is NOT using Linq
+                //this is using EntityFramework
                 return context.Artists.ToList();
             }
         }
-        //dump a particular instance of the entity via primary key
+        //dump a particular instance of the entity via the primary key
         [DataObjectMethod(DataObjectMethodType.Select, false)]
         public Artist Artist_Get(int artistid)
         {
             using (var context = new ChinookContext())
             {
-                //this is not using linq
-                //this is using entity framework
+                //this is NOT using Linq
+                //this is using EntityFramework
                 return context.Artists.Find(artistid);
             }
         }

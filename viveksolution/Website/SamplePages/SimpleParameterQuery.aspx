@@ -3,9 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <br /><br />
     <div class="row">
-    <asp:Label ID="Label1" runat="server" Text="Enter Artist Name(partial)"></asp:Label>&nbsp;&nbsp;
+    <asp:Label ID="Label1" runat="server" Text="Enter Artist Name (partial)"></asp:Label>&nbsp;&nbsp;
     <asp:TextBox ID="ArtistName" runat="server"></asp:TextBox>&nbsp;&nbsp;
-    <asp:LinkButton ID="GetArtistAlbums" runat="server">Get Artist Album</asp:LinkButton>
+    <asp:LinkButton ID="GetArtistAlbums" runat="server">Get Artist Albums</asp:LinkButton>
     </div>
     <br />
     <div class="row">
@@ -13,35 +13,24 @@
             <Columns>
                 <asp:BoundField DataField="AlbumId" HeaderText="Album" SortExpression="AlbumId">
                     <HeaderStyle HorizontalAlign="Center" BackColor="#999999"></HeaderStyle>
-
                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                 </asp:BoundField>
-                <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title">
-                    <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
-
-                    <ItemStyle HorizontalAlign="Center"></ItemStyle>
-                </asp:BoundField>
+                <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title"></asp:BoundField>
                 <asp:BoundField DataField="ArtistId" HeaderText="Artist" SortExpression="ArtistId">
                     <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
-
                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                 </asp:BoundField>
                 <asp:BoundField DataField="ReleaseYear" HeaderText="Released" SortExpression="ReleaseYear">
                     <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
-
                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                 </asp:BoundField>
-                <asp:BoundField DataField="ReleaseLabel" HeaderText="Label" SortExpression="ReleaseLabel">
-                    <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
-
-                    <ItemStyle HorizontalAlign="Center"></ItemStyle>
-                </asp:BoundField>
+                <asp:BoundField DataField="ReleaseLabel" HeaderText="Label" SortExpression="ReleaseLabel"></asp:BoundField>
             </Columns>
             <EmptyDataTemplate>
-                Nothing to display for current Artist Name
+                Nothing to display for current Artist Name.
             </EmptyDataTemplate>
         </asp:GridView>
-        </div>
+    </div>
     <br />
     <asp:ListView ID="ArtistNameLVList" runat="server" DataSourceID="ArtistNameODS">
         <AlternatingItemTemplate>
@@ -56,17 +45,18 @@
                     <asp:Label Text='<%# Eval("ReleaseYear") %>' runat="server" ID="ReleaseYearLabel" /></td>
                 <td>
                     <asp:Label Text='<%# Eval("ReleaseLabel") %>' runat="server" ID="ReleaseLabelLabel" /></td>
-               <%-- <td>
+              <%--  <td>
                     <asp:Label Text='<%# Eval("Artist") %>' runat="server" ID="ArtistLabel" /></td>--%>
             </tr>
         </AlternatingItemTemplate>
-        <EmptyDataTemplate>
+       <EmptyDataTemplate>
             <table runat="server" style="background-color: #FFFFFF; border-collapse: collapse; border-color: #999999; border-style: none; border-width: 1px;">
                 <tr>
                     <td>No data to display for the current Artist Name.</td>
                 </tr>
             </table>
         </EmptyDataTemplate>
+      
         <ItemTemplate>
             <tr style="background-color: #DCDCDC; color: #000000;">
                 <td>
@@ -79,7 +69,7 @@
                     <asp:Label Text='<%# Eval("ReleaseYear") %>' runat="server" ID="ReleaseYearLabel" /></td>
                 <td>
                     <asp:Label Text='<%# Eval("ReleaseLabel") %>' runat="server" ID="ReleaseLabelLabel" /></td>
-                <%--<td>
+               <%-- <td>
                     <asp:Label Text='<%# Eval("Artist") %>' runat="server" ID="ArtistLabel" /></td>--%>
             </tr>
         </ItemTemplate>
@@ -94,7 +84,7 @@
                                 <th runat="server">Artist</th>
                                 <th runat="server">Released</th>
                                 <th runat="server">Label</th>
-                               <%-- <th runat="server">Artist</th> this is a navigation property and we dont want it--%>
+                               <%-- <th runat="server">Artist</th> navigation property--%>
                             </tr>
                             <tr runat="server" id="itemPlaceholder"></tr>
                         </table>
@@ -113,10 +103,15 @@
                 </tr>
             </table>
         </LayoutTemplate>
+       
     </asp:ListView>
-    <asp:ObjectDataSource ID="ArtistNameODS" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="Albums_GetForArtistbyName" TypeName="ChinookSystem.BLL.AlbumController">
+    <asp:ObjectDataSource ID="ArtistNameODS" runat="server" 
+        OldValuesParameterFormatString="original_{0}" 
+        SelectMethod="Albums_GetForArtistbyName" 
+        TypeName="ChinookSystem.BLL.AlbumController">
         <SelectParameters>
-            <asp:ControlParameter ControlID="ArtistName" PropertyName="Text" Name="name" Type="String"></asp:ControlParameter>
+            <asp:ControlParameter ControlID="ArtistName" 
+                PropertyName="Text" Name="name" Type="String"></asp:ControlParameter>
         </SelectParameters>
     </asp:ObjectDataSource>
 </asp:Content>
